@@ -1,5 +1,7 @@
 interface Props {
   product: Product;
+  index: number;
+  deleteProduct: (index: number) => void;
 }
 
 interface Product {
@@ -10,7 +12,7 @@ interface Product {
   imgSrc: string;
 }
 
-const Product = ({ product }: Props) => {
+const Product = ({ product, index, deleteProduct }: Props) => {
   return (
     <section className="product_container">
       <div className="separate_container">
@@ -30,8 +32,13 @@ const Product = ({ product }: Props) => {
           </div>
         </div>
         <div className="valor_container">
-          <p className="inter_body600">${product.price}.00</p>
-          <p className="inter_body400 gray_color">x</p>
+          <p className="inter_body600">TWD {product.price}.00</p>
+          <button
+            className="inter_body400 gray_color delectBnt"
+            onClick={() => deleteProduct(index)}
+          >
+            x
+          </button>
         </div>
       </div>
     </section>

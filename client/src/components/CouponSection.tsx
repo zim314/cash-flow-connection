@@ -1,6 +1,8 @@
-import React from "react";
+interface Props {
+  totalNumber: number;
+}
 
-const CouponSection = () => {
+const CouponSection = ({ totalNumber }: Props) => {
   return (
     <section>
       <div className="input_button_container">
@@ -13,19 +15,19 @@ const CouponSection = () => {
       </div>
       <div className="info_contairner">
         <div>
-          <div className="info_group_container inter_body500 gray_color">
+          {/* <div className="info_group_container inter_body500 gray_color">
             <p>Sub total</p>
             <p>$2597.00</p>
-          </div>
+          </div> */}
 
-          <div className="info_group_container inter_body500 gray_color">
+          {/* <div className="info_group_container inter_body500 gray_color">
             <p>Tax</p>
             <p>$623.28</p>
-          </div>
+          </div> */}
 
           <div className="info_group_container inter_body600">
             <p>Total</p>
-            <p>$3220.28</p>
+            <p>TWD {totalNumber}.00</p>
           </div>
         </div>
       </div>

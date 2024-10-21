@@ -1,34 +1,27 @@
-import Product from "./Product";
+import ProductContent from "./Product";
 
-const products = [
-  {
-    name: "iPhone 12 Pro",
-    color: "Golden",
-    quantity: 1,
-    price: 999,
-    imgSrc: "/img/Gold.png",
-  },
-  {
-    name: "Apple Watch",
-    color: "Blue",
-    quantity: 1,
-    price: 399,
-    imgSrc: "/img/Blue.png",
-  },
-  {
-    name: "iMac",
-    color: "Green",
-    quantity: 1,
-    price: 1199,
-    imgSrc: "img/iMac=Front 1.png",
-  },
-];
+interface Props {
+  products: Product[];
+  deleteProduct: (index: number) => void;
+}
+interface Product {
+  name: string;
+  color: string;
+  quantity: number;
+  price: number;
+  imgSrc: string;
+}
 
-const ProductList = () => {
+const ProductList = ({ products, deleteProduct }: Props) => {
   return (
     <div>
       {products.map((product, index) => (
-        <Product key={index} product={product} />
+        <ProductContent
+          key={product.name + index}
+          product={product}
+          index={index}
+          deleteProduct={deleteProduct}
+        />
       ))}
       <hr style={{ border: "1px solid var(--gray2)", marginBottom: "20px" }} />
     </div>

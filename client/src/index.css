@@ -89,11 +89,15 @@ main {
 
 /*****section_up */
 .section_up {
+  height: 504px;
   width: 500px;
   background-color: var(--gray1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .product_container {
   margin-bottom: 20px;
@@ -179,7 +183,7 @@ button {
 /******section donw*/
 .section_donw {
   width: 500px;
-  height: 600px;
+  height: 504px;
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -203,11 +207,13 @@ button {
 #postal,
 #miSelect {
   border-radius: 7px;
-  color: var(--gray2);
-  padding: 20px;
+  /* color: var(--gray2); */
+  color: black;
+  padding: 17px;
   background-color: var(--whithe);
   border: var(--gray2) solid 1px;
   margin-bottom: 20px;
+
 }
 #name,
 #email,
@@ -227,6 +233,17 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.delectBnt {
+  height: fit-content;
+  width: fit-content;
+  background-color: rgb(0,0,0,0);
+}
+
+.delectBnt:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 #postal,
