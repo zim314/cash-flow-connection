@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
+import OrderPage from "./pages/OrderPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import PaymentPage from "./pages/PaymentPage";
+import PaymentSuccessfulPage from "./pages/PaymentSuccessfulPage";
 
 const router = () => {
   return (
     <Routes>
-      <Route path="/" element={<CheckoutPage />} />
-      <Route path="/payment" element={<PaymentPage />} />
+      <Route path="/" element={<OrderPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/success" element={<PaymentSuccessfulPage />} />
     </Routes>
   );
 };

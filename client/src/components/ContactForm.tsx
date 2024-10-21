@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   return (
@@ -42,7 +42,9 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <button type="submit">Continue</button>
+        <Link to="/payment">
+          <button type="submit">Continue</button>
+        </Link>
       </form>
     </div>
   );
